@@ -23,7 +23,7 @@ public class SpinePlayerMovement : MonoBehaviour
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         spineAnimationState = skeletonAnimation.AnimationState;
         skeleton = skeletonAnimation.Skeleton;
-        spineAnimationState.SetAnimation(0, walkingAnimationName, true, );
+        spineAnimationState.SetAnimation(0, walkingAnimationName, true );
     }
 
     // Update is called once per frame
