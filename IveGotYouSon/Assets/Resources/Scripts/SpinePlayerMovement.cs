@@ -52,11 +52,6 @@ public class SpinePlayerMovement : MonoBehaviour
     {
         var spineAnimationState = skeletonAnimation.AnimationState;
 
-        if (skeletonAnimation = idleAnimationName)
-        {
-
-        }
-
         skeletonAnimation.AnimationName = walkingAnimationName;
         spineAnimationState.SetAnimation(0, idleAnimationName, false);
         spineAnimationState.AddAnimation(0, walkingAnimationName, true,0);
