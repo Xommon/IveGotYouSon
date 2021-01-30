@@ -7,33 +7,22 @@ public class PlayerMovement : MonoBehaviour
 
     public float moveX;
     public float moveY;
-    public float xVel;
-    public float yVel;
     public float speed;
+
+    static Vector2 xTranslation = new Vector2(1, 1);
+    static Vector2 yTranslation = new Vector2(-1, 1);
+
     Rigidbody2D rigidBody;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        xVel = rigidBody.velocity.x;
-        yVel = rigidBody.velocity.y;
-
-        //inputs: is the player moving up or down, left or right
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
-
-        //If the player is moving diagonally, we want them to move the same speed that they move the other directions
-        if (moveX != 0) xVel = speed * (moveX) / (Mathf.Sqrt(Mathf.Pow(moveX, 2) + Mathf.Pow(moveY, 2)));
-        else xVel = 0;
-        if (moveY != 0) yVel = speed * (moveY) / (Mathf.Sqrt(Mathf.Pow(moveX, 2) + Mathf.Pow(moveY, 2)));
-        else yVel = 0;
-
-        rigidBody.velocity = new Vector2(xVel, yVel);
+        rigidBody.velocity = speed * (moveX * xTranslation + moveY * yTranslation).normalized;
     }
 }
