@@ -2040,7 +2040,7 @@ GameObject:
   - component: {fileID: 1361715139}
   - component: {fileID: 1361715138}
   m_Layer: 0
-  m_Name: SpineGameObject(father)
+  m_Name: SpineGameObject
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2073,7 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 1361715139}
-  idleAnimationName: stand_back
+  idleAnimationName: stand
   walkingAnimationName: walk
   hitBackAnimationName: hit
   currentAnimationPlaying: 
@@ -2111,7 +2111,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: 
+  _animationName: stand
   loop: 1
   timeScale: 1
 --- !u!23 &1361715140

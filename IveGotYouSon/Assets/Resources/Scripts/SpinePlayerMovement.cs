@@ -31,11 +31,9 @@ public class SpinePlayerMovement : MonoBehaviour
         
         spineAnimationState.Event += HandleEvent; ;
         spineAnimationState.End += (entry) => Debug.Log("Start: " + entry.TrackIndex);
-
-        currentAnimationPlaying = walkingAnimationName; 
-
-        spineAnimationState.SetAnimation(0, currentAnimationPlaying, true);
-        skeletonAnimation.AnimationName = currentAnimationPlaying;
+                
+        spineAnimationState.SetAnimation(0, idleAnimationName, true);
+        skeletonAnimation.AnimationName = idleAnimationName;
     }
 
     void HandleEvent (TrackEntry trackEntry, Spine.Event e)
@@ -47,13 +45,21 @@ public class SpinePlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartPlayingWalking();
+        
     }
 
     public void StartPlayingWalking()
     {
-        //skeletonAnimation.AnimationName = walkingAnimationName; 
-        //spineAnimationState.AddAnimation(0, walkingAnimationName, true, 0);
+        var spineAnimationState = skeletonAnimation.AnimationState;
+
+        if (skeletonAnimation = idleAnimationName)
+        {
+
+        }
+
+        skeletonAnimation.AnimationName = walkingAnimationName;
+        spineAnimationState.SetAnimation(0, idleAnimationName, false);
+        spineAnimationState.AddAnimation(0, walkingAnimationName, true,0);
     }
 }
 
