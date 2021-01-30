@@ -1469,12 +1469,12 @@ GameObject:
   - component: {fileID: 858603260}
   - component: {fileID: 858603261}
   m_Layer: 0
-  m_Name: char_test_02
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &858603260
 Transform:
   m_ObjectHideFlags: 0

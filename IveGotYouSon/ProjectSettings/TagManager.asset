@@ -41,15 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Wall
-    uniqueID: 3990918949
-    locked: 0
   - name: Floor
     uniqueID: 179653411
+    locked: 0
+  - name: BackWall
+    uniqueID: 3990918949
     locked: 0
   - name: Decal
     uniqueID: 1522263615
     locked: 0
   - name: Character
     uniqueID: 3651078107
+    locked: 0
+  - name: ForeWall
+    uniqueID: 4129479361
     locked: 0
