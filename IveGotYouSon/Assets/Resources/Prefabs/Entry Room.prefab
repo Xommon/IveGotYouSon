@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 114391489058514274}
   - component: {fileID: 61273959071891808}
   - component: {fileID: 50475196529406120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn Point (1)
   m_TagString: SpawnPoint
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 114724521025756804}
   - component: {fileID: 61342237357115354}
   - component: {fileID: 50627981948616380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn Point (2)
   m_TagString: SpawnPoint
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 114479378148705994}
   - component: {fileID: 61153349465182346}
   - component: {fileID: 50110469007180854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn Point
   m_TagString: SpawnPoint
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
@@ -295,7 +295,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4284646200961232}
   - component: {fileID: 114329229263871776}
-  m_Layer: 0
+  - component: {fileID: 4674729856189014372}
+  - component: {fileID: 2200344842937399139}
+  m_Layer: 10
   m_Name: Entry Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,6 +334,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574b113a1431ad2489b46dd20fdf7dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4674729856189014372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384366362914734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d39db5dd91e46949804603c39696987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walls:
+  - {fileID: 4395555095892858285}
+  - {fileID: 6961600227258085729}
+  - {fileID: 1381749340714202572}
+  wallSprites: []
+  floor: {fileID: 6481413339910299120}
+  playerPresent: 0
+--- !u!61 &2200344842937399139
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384366362914734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &1476785428554506
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +509,7 @@ GameObject:
   - component: {fileID: 114504386007222772}
   - component: {fileID: 61527779136517890}
   - component: {fileID: 50128803501875684}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spawn Point (3)
   m_TagString: SpawnPoint
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
@@ -1215,7 +1262,7 @@ GameObject:
   - component: {fileID: 4392183502333230589}
   - component: {fileID: 5910887960461484184}
   - component: {fileID: 1370505777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Destroyer
   m_TagString: Untagged
   m_Icon: {fileID: -6431860639581277017, guid: 0000000000000000d000000000000000, type: 0}
