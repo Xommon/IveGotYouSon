@@ -1150,8 +1150,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveX: 0
   moveY: 0
-  xVel: 0
-  yVel: 0
   speed: 4
 --- !u!212 &809395076
 SpriteRenderer:
@@ -1956,8 +1954,8 @@ GameObject:
   - component: {fileID: 1261200747}
   - component: {fileID: 1261200746}
   - component: {fileID: 1261200745}
-  - component: {fileID: 1261200744}
   - component: {fileID: 1261200748}
+  - component: {fileID: 1261200744}
   m_Layer: 0
   m_Name: SpineGameObject(father)
   m_TagString: Untagged
@@ -2059,7 +2057,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261200743}
   m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0.09, y: 1.93, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1767709276}
@@ -2074,13 +2072,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261200743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2719662ddcbaeb74385fb65991cd0a7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d62557def6441c48a6648a6c4a37970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1261200744}
   idleAnimationName: stand
   walkingAnimationName: walk
   hitBackAnimationName: hit_back
-  skeletonAnimation: {fileID: 1261200744}
+  currentAnimationPlaying: 
 --- !u!1 &1296119404
 GameObject:
   m_ObjectHideFlags: 0
