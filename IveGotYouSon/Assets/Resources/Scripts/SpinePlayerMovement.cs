@@ -51,10 +51,10 @@ public class SpinePlayerMovement : MonoBehaviour
     public void StartPlayingWalking()
     {
         var spineAnimationState = skeletonAnimation.AnimationState;
-
-        skeletonAnimation.AnimationName = walkingAnimationName;
-        spineAnimationState.SetAnimation(0, idleAnimationName, false);
-        spineAnimationState.AddAnimation(0, walkingAnimationName, true,0);
+        if (skeletonAnimation.AnimationName!=walkingAnimationName) {
+            //spineAnimationState.SetAnimation(0, idleAnimationName, false);
+            spineAnimationState.AddAnimation(0, walkingAnimationName, true, 0);
+        }
     }
 }
 

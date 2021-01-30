@@ -556,12 +556,12 @@ GameObject:
   - component: {fileID: 2187103114386831262}
   - component: {fileID: 3291728611172847118}
   m_Layer: 0
-  m_Name: BottomLeft1
+  m_Name: BottomLeftDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2187103114386831262
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,12 +1157,12 @@ GameObject:
   - component: {fileID: 4597003817570046773}
   - component: {fileID: 6513075387414907495}
   m_Layer: 0
-  m_Name: BottomRight1
+  m_Name: BottomRightDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4597003817570046773
 Transform:
   m_ObjectHideFlags: 0
@@ -1311,7 +1311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5103432731882042133
 Transform:
   m_ObjectHideFlags: 0
@@ -1399,7 +1399,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7818377700262429220
 Transform:
   m_ObjectHideFlags: 0
