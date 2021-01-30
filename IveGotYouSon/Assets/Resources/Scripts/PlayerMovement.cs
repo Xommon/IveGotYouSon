@@ -14,9 +14,19 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rigidBody;
 
+    public SpinePlayerMovement spine;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnValidate()
+    {
+        if (spine == null)
+        {
+            spine = GetComponent<SpinePlayerMovement>();
+        }
     }
 
     void FixedUpdate()
@@ -24,5 +34,9 @@ public class PlayerMovement : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         rigidBody.velocity = speed * (moveX * xTranslation + moveY * yTranslation).normalized;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Its Working");
+        }
     }
 }
