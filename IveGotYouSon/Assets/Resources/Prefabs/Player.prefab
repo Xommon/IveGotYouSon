@@ -866,7 +866,7 @@ MonoBehaviour:
   - {fileID: 3361667655481815105, guid: 0c5ab8ee08cf8974e9a49704af206d57, type: 3}
   - {fileID: -8344770701664295487, guid: 0c5ab8ee08cf8974e9a49704af206d57, type: 3}
   pillow: {fileID: 2631724588043283522, guid: ed6211eb7a542a44cab8802179abb3b2, type: 3}
-  currentRoom: {fileID: 0}
+  currentRoom: {fileID: 1384366362914734, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
   aimDots:
   - {fileID: 5170238884111110478}
   - {fileID: 9194042339610814831}
@@ -878,7 +878,8 @@ MonoBehaviour:
   - {fileID: 6778727796684664547}
   closestDot: {fileID: 0}
   rigidBody: {fileID: 8465915889595991697}
---- !u!58 &8465915889595991698
+  hurt: 0
+  --- !u!58 &8465915889595991698
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1088,7 +1089,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8465915890114771665}
+  - component: {fileID: 9167544589509624282}
   - component: {fileID: 8465915890114771669}
   - component: {fileID: 8465915890114771668}
   - component: {fileID: 8465915890114771667}
@@ -1100,8 +1101,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8465915890114771665
-Transform:
+--- !u!224 &9167544589509624282
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1114,6 +1115,11 @@ Transform:
   m_Father: {fileID: 8465915890521030476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!33 &8465915890114771669
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1252,7 +1258,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
-  - {fileID: 8465915890114771665}
+  - {fileID: 9167544589509624282}
   - {fileID: 8465915889611906028}
   - {fileID: 8465915889980388206}
   m_Father: {fileID: 8465915889595991701}

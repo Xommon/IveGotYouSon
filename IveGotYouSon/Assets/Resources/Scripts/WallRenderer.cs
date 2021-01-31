@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallRenderer : MonoBehaviour {
+public class WallRenderer : MonoBehaviour 
+{
     public GameObject[] walls;
     public List<SpriteRenderer> wallSprites;
     public SpriteRenderer floor;
