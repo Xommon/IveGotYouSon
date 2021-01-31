@@ -1,0 +1,62 @@
+
+Vacuum.png
+size: 1060,1033
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+vacuum/base
+  rotate: false
+  xy: 2, 2
+  size: 541, 1029
+  orig: 541, 1029
+  offset: 0, 0
+  index: -1
+vacuum/boc
+  rotate: false
+  xy: 545, 2
+  size: 325, 454
+  orig: 325, 454
+  offset: 0, 0
+  index: -1
+vacuum/dirty
+  rotate: false
+  xy: 761, 570
+  size: 272, 217
+  orig: 272, 217
+  offset: 0, 0
+  index: -1
+vacuum/face
+  rotate: false
+  xy: 872, 272
+  size: 144, 207
+  orig: 144, 207
+  offset: 0, 0
+  index: -1
+vacuum/mouth
+  rotate: false
+  xy: 761, 789
+  size: 297, 242
+  orig: 297, 242
+  offset: 0, 0
+  index: -1
+vacuum/shadow
+  rotate: true
+  xy: 545, 458
+  size: 573, 214
+  orig: 573, 214
+  offset: 0, 0
+  index: -1
+vacuum/tube
+  rotate: true
+  xy: 761, 481
+  size: 87, 200
+  orig: 87, 200
+  offset: 0, 0
+  index: -1
+vacuum/wheel
+  rotate: false
+  xy: 872, 134
+  size: 136, 136
+  orig: 136, 136
+  offset: 0, 0
+  index: -1
