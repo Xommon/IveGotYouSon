@@ -11,6 +11,9 @@ public class SpinePlayer : MonoBehaviour
     public string currentState;
     public string currentAnimation;
 
+    public bool backAnimation;
+    public bool flipAnimation;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +41,13 @@ public class SpinePlayer : MonoBehaviour
     public void SetCharacterState(string state)
     {
         //switch (currentState)
-       // {
-            //case "stand":
-                //SetAnimation(stand, true, 1f);
-                //break;
-           // case "Walk":
-                //SetAnimation(walk, true, 1f);
-                //break;
+        // {
+        //case "stand":
+        //SetAnimation(stand, true, 1f);
+        //break;
+        // case "Walk":
+        //SetAnimation(walk, true, 1f);
+        //break;
 
         //}
         if (state.Equals("Stand"))
@@ -55,18 +58,34 @@ public class SpinePlayer : MonoBehaviour
         {
             SetAnimation(walk, true, 1f);
         }
+        else if (state.Equals("Walk_Back"))
+        {
+            SetAnimation(walk_Back, true, 1f);
+        }
     }
 
     public void SpineMove()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (backAnimation == false)
         {
             SetCharacterState("Walk");
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else
         {
-            SetCharacterState("Stand");
+            SetCharacterState("Walk_Back"); 
         }
-
+        if (flipAnimation == false)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+    }
+    public void SpineStand ()
+    {
+        SetCharacterState("Stand");
     }
 }
