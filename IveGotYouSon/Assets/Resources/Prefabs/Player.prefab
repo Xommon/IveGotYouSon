@@ -1216,11 +1216,11 @@ MonoBehaviour:
   walk: {fileID: 11400000, guid: 1b6b3376d5c040e4b8c0b43116ecb91c, type: 2}
   walk_Back: {fileID: 11400000, guid: e5101c5334207014abf7a26cb33afb8b, type: 2}
   stand: {fileID: 11400000, guid: a28ff5c343f189a47ba7874ecc24a66e, type: 2}
-  stand_Back: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
+  stand_Back: {fileID: 11400000, guid: 415e4a0c7dc99e1428b5368a9d69d0ff, type: 2}
   hit: {fileID: 0}
   hit_Back: {fileID: 0}
-  shoot: {fileID: 0}
-  shoot_back: {fileID: 0}
+  shoot: {fileID: 11400000, guid: 706686f5adb59cb479d890b1a73cf663, type: 2}
+  shoot_back: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
   currentState: 
   currentAnimation: 
   backAnimation: 0
