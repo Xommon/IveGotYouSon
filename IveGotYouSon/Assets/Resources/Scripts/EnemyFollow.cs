@@ -10,6 +10,8 @@ public class EnemyFollow : MonoBehaviour
     public Vector3 startingPosition;
     public EnemyRenderer enemyRenderer;
     public bool flying;
+    public bool attacking;
+    public Vector3 foundPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +41,26 @@ public class EnemyFollow : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed / 500);
+        if (!flying)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed / 500);
+        }
+
+        if (!attacking && Vector3.Distance(transform.position, player.transform.position) < 7 && flying)
+        {
+            attacking = true;
+            foundPosition = player.transform.position;
+            Invoke("StopDash", 1.5f);
+        }
+        else if (attacking)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, foundPosition, speed / 500);
+        }
+    }
+
+    void StopDash()
+    {
+        attacking = false;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
