@@ -293,6 +293,8 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   enemyRenderer: {fileID: 1485607542034060192}
   flying: 0
+  attacking: 0
+  foundPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &1485607542034060192
 MonoBehaviour:
   m_ObjectHideFlags: 0

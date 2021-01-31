@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 1421401028234473777}
   - component: {fileID: 1421401028234473778}
   - component: {fileID: 1421401028234473779}
+  - component: {fileID: 953878695}
   m_Layer: 0
-  m_Name: Spine GameObject (BatBook)
+  m_Name: SpineGameObjectBatBook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,6 +120,24 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
+--- !u!114 &953878695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421401028234473781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f45730b20f7bb943bc3b09484ad3e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1421401028234473779}
+  idle: {fileID: 11400000, guid: 693a488dd59b6a446b9fd5f398499ec4, type: 2}
+  fly_Fast: {fileID: 11400000, guid: 878e041ef6214d942a982b5992cce445, type: 2}
+  currentState: 
+  currentAnimation: 
+  flipAnimation: 0
 --- !u!1 &5315292836804117416
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +266,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

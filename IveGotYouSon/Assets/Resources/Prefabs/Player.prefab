@@ -748,7 +748,6 @@ GameObject:
   - component: {fileID: 8465915889595991701}
   - component: {fileID: 8465915889595991700}
   - component: {fileID: 8465915889595991699}
-  - component: {fileID: 8465915889595991698}
   - component: {fileID: 8465915889595991697}
   m_Layer: 0
   m_Name: Player
@@ -877,24 +876,8 @@ MonoBehaviour:
   - {fileID: 8059476830365932690}
   - {fileID: 6778727796684664547}
   closestDot: {fileID: 0}
-  rigidBody: {fileID: 8465915889595991697}
   hurt: 0
-  --- !u!58 &8465915889595991698
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8465915889595991696}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.09
+  rigidBody: {fileID: 8465915889595991697}
 --- !u!50 &8465915889595991697
 Rigidbody2D:
   serializedVersion: 4
@@ -1279,7 +1262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3547369171222299597
 Transform:
   m_ObjectHideFlags: 0
