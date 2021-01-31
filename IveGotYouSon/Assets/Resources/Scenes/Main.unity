@@ -318,6 +318,10 @@ PrefabInstance:
       propertyPath: bears.Array.data[2]
       value: 
       objectReference: {fileID: 1590159822}
+    - target: {fileID: 8465915889595991699, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: closestDot
+      value: 
+      objectReference: {fileID: 1129931221}
     - target: {fileID: 8465915889595991701, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1015,12 +1019,12 @@ GameObject:
   - component: {fileID: 1129931222}
   - component: {fileID: 1129931221}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: DebugObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1129931221
 SpriteRenderer:
   m_ObjectHideFlags: 0
