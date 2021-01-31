@@ -7,7 +7,7 @@ public class Pillow : MonoBehaviour
     public Vector2 direction;
     Rigidbody2D rigidBody;
     public float speed;
-    public Vector2 target;
+    public Vector3 target;
     public PlayerMovement player;
     bool targetSet = false;
 
@@ -17,12 +17,13 @@ public class Pillow : MonoBehaviour
         player = FindObjectOfType<PlayerMovement>();
         target = player.GetMouseWorldPosition();
         Invoke("Delete", 1.0f);
+        rigidBody.velocity = (target - player.transform.position).normalized * speed;
     }
 
     void FixedUpdate()
     {
         
-        rigidBody.velocity = target.normalized * speed;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -13,6 +13,9 @@ public class EnemyFollow : MonoBehaviour
     public bool attacking;
     public Vector3 foundPosition;
 
+    float attackTimer;
+    public float attackDelay;
+
     private GameObject bookSpine;
     private GameObject vacSpine;
 
@@ -26,10 +29,11 @@ public class EnemyFollow : MonoBehaviour
         bookSpine = GameObject.Find("SpineGameObjectBatBook");
         vacSpine = GameObject.Find("SpineGameObjectVacuum");
     }
-
     // Update is called once per frame
     void Update()
     {
+
+        if (attackTimer > 0) attackTimer -= Time.deltaTime;
         // Return the enemy to its starting position if the player leaves the room
         if (player.currentRoom != enemyRenderer.room)
         {
@@ -98,6 +102,9 @@ public class EnemyFollow : MonoBehaviour
         {
             health -= 1;
             Destroy(collision.gameObject);
+        }
+        if (collision.transform.tag == "Player" && player.damageTimer <= 0) {
+            player.takeDamage(1f);
         }
     }
 }

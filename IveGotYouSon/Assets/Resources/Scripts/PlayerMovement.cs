@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     public int bearCount;
     public float fireDelay;
     public float fireTimer;
+    public float damageDelay;
+    public float damageTimer;
     public int level = 1;
     public GameObject vision;
     public GameObject darkness;
@@ -69,15 +71,16 @@ public class PlayerMovement : MonoBehaviour
         if (plane.Raycast(ray, out distance))
         {
             worldPosition = ray.GetPoint(distance);
-            //print("Aim: " + worldPosition.normalized);
             return worldPosition;
         }
+        print("this shouldn't happen");
         return new Vector3(0,0,0);
     }
 
     void FixedUpdate()
     {
         if (fireTimer > 0) fireTimer -= Time.fixedDeltaTime;
+        if (damageTimer > 0) damageTimer -= Time.fixedDeltaTime;
         // HUD hearts and bears
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -185,5 +188,10 @@ public class PlayerMovement : MonoBehaviour
             bearCount++;
             Destroy(collision.gameObject);
         }
+    }
+
+    public void takeDamage(int i) {
+        health -= i;
+        damageTimer = damageDelay;
     }
 }
