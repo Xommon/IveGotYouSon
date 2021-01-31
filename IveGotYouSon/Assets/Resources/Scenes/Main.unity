@@ -404,6 +404,7 @@ PrefabInstance:
       propertyPath: bears.Array.data[2]
       value: 
       objectReference: {fileID: 1590159822}
+<<<<<<< HEAD
     - target: {fileID: 8465915889595991699, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: rigidBody
       value: 
@@ -416,6 +417,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+=======
+>>>>>>> parent of 70f7e7b... Teddy Bear Prefab Working
     - target: {fileID: 8465915889595991701, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1123,6 +1126,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964894798}
   m_CullTransparentMesh: 0
+<<<<<<< HEAD
 --- !u!1 &1123922197
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,6 +1167,14 @@ RectTransform:
   m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1123922199
+=======
+--- !u!1 &1132757320 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5315292836855170381, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
+  m_PrefabInstance: {fileID: 1421401027852775863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1132757321
+>>>>>>> parent of 70f7e7b... Teddy Bear Prefab Working
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1217,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -1243,6 +1256,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123922197}
   m_CullTransparentMesh: 0
+=======
+  health: 1
+  speed: 20
+  player: {fileID: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  enemyRenderer: {fileID: 1132757321}
+  flying: 1
+  attacking: 0
+  foundPosition: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 70f7e7b... Teddy Bear Prefab Working
 --- !u!1 &1214876392
 GameObject:
   m_ObjectHideFlags: 0
