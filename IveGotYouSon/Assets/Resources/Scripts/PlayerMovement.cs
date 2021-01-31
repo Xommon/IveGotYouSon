@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer[] aimDots;
     public SpriteRenderer closestDot;
     public bool hurt;
+    public GameObject debugObject;
+    public Vector3 debugValues;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
@@ -42,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
         hurt = false;
     }
 
-    public static Vector3 GetMouseWorldPosition()
+    public Vector3 GetMouseWorldPosition()
     {
         // Mouse position
         Vector3 mousePos = Input.mousePosition;
@@ -67,9 +69,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Shoot direction
-        Vector3 mousePosition = GetMouseWorldPosition();
+        /*Vector3 mousePosition = GetMouseWorldPosition();
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;*/
+
+        //Debug.Log($"{transform.position} - {GetMouseWorldPosition()} = {transform.position - GetMouseWorldPosition()}");
+        debugObject.transform.position = GetMouseWorldPosition();
+
 
         for (int i = 0; i < bears.Length; i++)
         {
@@ -97,13 +103,14 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
-                Vector3 shootDirection;
+                /*Vector3 shootDirection;
                 shootDirection = Input.mousePosition;
                 shootDirection.z = 0.0f;
                 shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
-                shootDirection = shootDirection - transform.position;
-                GameObject newPillow = Instantiate(pillow, transform.position + new Vector3(0, 0, -0.55f), Quaternion.Euler(new Vector3(0, 0, 0)));
-                newPillow.GetComponent<Rigidbody2D>().velocity = new Vector2(shootDirection.x * newPillow.GetComponent<Pillow>().speed, shootDirection.y * newPillow.GetComponent<Pillow>().speed);
+                shootDirection = shootDirection - transform.position;*/
+                Instantiate(pillow, transform.position + new Vector3(0, 0, -0.55f), Quaternion.Euler(new Vector3(0, 0, 0)));
+                //newPillow.GetComponent<Rigidbody2D>().velocity = new Vector2(GetMouseWorldPosition().x * newPillow.GetComponent<Pillow>().speed, GetMouseWorldPosition().y * newPillow.GetComponent<Pillow>().speed);
+                //newPillow.GetComponent<Rigidbody2D>().velocity = debugValues;
             }
 
             // Decrease vision over time

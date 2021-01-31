@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2290173426071092424}
   - component: {fileID: 2290173426071092425}
   m_Layer: 0
-  m_Name: Table
+  m_Name: Bookcase 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3498937, y: 0.37950563}
+  m_Offset: {x: 0.3846879, y: -0.25195193}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +161,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4290879, y: 4.228779}
+  m_Size: {x: 1.9656801, y: 2.1667671}
   m_EdgeRadius: 0
 --- !u!1 &2290173426433370264
 GameObject:
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 2290173426433370267}
   - component: {fileID: 2290173426433370266}
   m_Layer: 0
-  m_Name: TableSprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,7 @@ SpriteRenderer:
   m_SortingLayerID: -643889189
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 39edc23d94fe3914f84801713d9a830a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 71dcd173644deb24f929be31adc75156, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

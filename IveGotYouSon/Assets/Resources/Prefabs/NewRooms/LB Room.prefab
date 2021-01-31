@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 1350260267469642592}
   - component: {fileID: 6049672759383074084}
   - component: {fileID: 982359356127900451}
+  - component: {fileID: -1955326860135897301}
   m_Layer: 10
   m_Name: LB Room
   m_TagString: Untagged
@@ -457,6 +458,8 @@ MonoBehaviour:
   - {fileID: 4392868895070035026}
   wallSprites: []
   floor: {fileID: 5393518279492458928}
+  player: {fileID: 0}
+  playerMovement: {fileID: 0}
   playerPresent: 0
 --- !u!61 &982359356127900451
 BoxCollider2D:
@@ -484,6 +487,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
+--- !u!114 &-1955326860135897301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382552626001964014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96a379302bb7bd428398ec02f6899f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 6476492049383641844, guid: 8706ae345236fdb44b8af21cd0fec75a, type: 3}
+  - {fileID: 4748907151585586922, guid: e581e7844d439264a97b42eaaac0a4ca, type: 3}
+  - {fileID: 1937119183842584440, guid: 96228b5df185cec4c8e5e2a8cc4416eb, type: 3}
+  - {fileID: 7910801613869773426, guid: b8b55ec29cfd3ed4299336a8935a7ce1, type: 3}
+  - {fileID: 3935714117489122862, guid: a995f832491423b468387e1ad08acfc6, type: 3}
+  - {fileID: 8979094807086629161, guid: 91062a0a53a4eb743ae8ee407170d85d, type: 3}
+  - {fileID: 1229379651224556560, guid: f3d3acba2df49ab4981d154fa339ed17, type: 3}
+  obstacles:
+  - {fileID: 2290173426071092430, guid: 209e97bf98253aa46a4dc338f6eb73b1, type: 3}
+  - {fileID: 2290173426071092430, guid: 3cd7a63a10d822b4480c82d0747c0bcc, type: 3}
+  - {fileID: 2290173426071092430, guid: a7d658211f713184a97463add6f7b118, type: 3}
+  - {fileID: 3969475945372067063, guid: 9686f7073f0a48542af4b92d8fd8f90b, type: 3}
+  - {fileID: 4473203760582672654, guid: a1a74f3cefcef1040811dabfd2928f09, type: 3}
+  - {fileID: 8547757030230678207, guid: f427607c991b6954e8d2ccc8b31f5eea, type: 3}
+  - {fileID: 2290173426071092430, guid: a95bbcd9dd1c32f47885cc2b60b946b0, type: 3}
+  - {fileID: 4647475216654676553, guid: 55d69fc7a2f79f84790404017d54b2c7, type: 3}
+  enemies:
+  - {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
+  - {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
+  - {fileID: 5315292836855170381, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
+  numberOfSpawnsUsable: 0
 --- !u!1 &1829671962824985342
 GameObject:
   m_ObjectHideFlags: 0

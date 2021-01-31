@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 17
+  speed: 32
   player: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   enemyRenderer: {fileID: 1132757321}

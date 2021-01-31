@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1485607541974828106}
   - component: {fileID: 1485607541974828105}
   - component: {fileID: 1770804301}
+  - component: {fileID: 395661001051627462}
   m_Layer: 0
   m_Name: SpineGameObjectVacuum
   m_TagString: Untagged
@@ -152,6 +153,24 @@ MonoBehaviour:
   loop: 1
   timeScale: 1
 --- !u!114 &1770804301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485607541974828111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e690302d1983f46ad8ed750f1e0b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1485607541974828105}
+  idle: {fileID: 11400000, guid: 7ecf8f011c7820d41bf548445e35f340, type: 2}
+  walk: {fileID: 11400000, guid: bc913caddc907f04ebf97d6e2bd28225, type: 2}
+  currentState: 
+  currentAnimation: 
+  flipAnimation: 0
+--- !u!114 &395661001051627462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  speed: 4
+  speed: 9
   player: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   enemyRenderer: {fileID: 1485607542034060192}
