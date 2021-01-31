@@ -187,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "TeddyBear")
         {
             bearCount++;
+            health++;
             Destroy(collision.gameObject);
         }
     }
