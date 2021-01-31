@@ -133,6 +133,11 @@ public class PlayerMovement : MonoBehaviour
             // Decrease vision over time
             vision.transform.localScale -= new Vector3(0.001f, 0.001f, 0);
 
+            if (vision.transform.localScale.x < 1)
+            {
+                health = 0;
+            }
+
             SpinePlayer Spine = PlayerSpine.GetComponent<SpinePlayer>(); 
             if (moveX == 0 && moveY == 0)
             {
