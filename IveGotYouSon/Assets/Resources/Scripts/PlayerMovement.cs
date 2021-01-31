@@ -31,6 +31,12 @@ public class PlayerMovement : MonoBehaviour
     public bool hurt;
     public GameObject debugObject;
     public Vector3 debugValues;
+    public GameObject heartsUI;
+    public GameObject bearsUI;
+    public GameObject gameOver;
+    public Image end;
+    public Image end2;
+    public bool fadeToEnd;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
@@ -94,15 +100,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // Shoot direction
-        /*Vector3 mousePosition = GetMouseWorldPosition();
-        Vector3 aimDirection = (mousePosition - transform.position).normalized;
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;*/
-
-        //Debug.Log($"{transform.position} - {GetMouseWorldPosition()} = {transform.position - GetMouseWorldPosition()}");
-        debugObject.transform.position = GetMouseWorldPosition();
-
-
         for (int i = 0; i < bears.Length; i++)
         {
             if (bearCount - 1 < i)
@@ -129,16 +126,8 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1") && fireTimer<=0)
             {
-                print("pillow thrown");
-                /*Vector3 shootDirection;
-                shootDirection = Input.mousePosition;
-                shootDirection.z = 0.0f;
-                shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
-                shootDirection = shootDirection - transform.position;*/
                 Instantiate(pillow, transform.position + new Vector3(0, 0, -0.55f), Quaternion.Euler(new Vector3(0, 0, 0)));
                 fireTimer = fireDelay;
-                //newPillow.GetComponent<Rigidbody2D>().velocity = new Vector2(GetMouseWorldPosition().x * newPillow.GetComponent<Pillow>().speed, GetMouseWorldPosition().y * newPillow.GetComponent<Pillow>().speed);
-                //newPillow.GetComponent<Rigidbody2D>().velocity = debugValues;
             }
 
             // Decrease vision over time
@@ -180,6 +169,20 @@ public class PlayerMovement : MonoBehaviour
                 hurt = false;
             }
         }
+        else
+        {
+            if (vision.transform.localScale.x > 0)
+            {
+                vision.transform.localScale -= new Vector3(0.5f, 0.5f, 0);
+            }
+            else
+            {
+                vision.transform.localScale = new Vector3(0, 0, 0);
+                heartsUI.SetActive(false);
+                bearsUI.SetActive(false);
+                gameOver.SetActive(true);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -190,6 +193,22 @@ public class PlayerMovement : MonoBehaviour
             health++;
             Destroy(collision.gameObject);
         }
+        else if (collision.tag == "Son" && bearCount == 3 && health != 0)
+        {
+            end.color += new Color(0, 0, 0, 1);
+
+            Invoke("FadeToEnd", 5.0f);
+
+            if (fadeToEnd)
+            {
+                end2.color += new Color(0, 0, 0, 0.5f);
+            }
+        }
+    }
+
+    void FadeToEnd()
+    {
+        fadeToEnd = true;
     }
 
     public void takeDamage(int i) {
