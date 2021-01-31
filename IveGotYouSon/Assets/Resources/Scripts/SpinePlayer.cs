@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 public class SpinePlayer : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
+    public SkeletonAnimation skeletonAnimationTrack;
     public AnimationReferenceAsset walk,walk_Back, stand, stand_Back, hit, hit_Back, shoot, shoot_back;
     public string currentState;
     public string currentAnimation;
@@ -18,7 +19,13 @@ public class SpinePlayer : MonoBehaviour
     void Start()
     {
         currentState = "Stand";
-        SetCharacterState(currentState); 
+        SetCharacterState(currentState);
+
+        skeletonAnimationTrack = GetComponent<SkeletonAnimation>(); 
+        if (skeletonAnimationTrack == null)
+        {
+            return; 
+        } 
     }
 
     // Update is called once per frame
@@ -68,11 +75,11 @@ public class SpinePlayer : MonoBehaviour
         }
         else if (state.Equals("Shoot"))
         {
-            SetAnimation(shoot, true, 1f); 
+            AddAnimation(shoot, false);  
         }
         else if (state.Equals("Shoot_Back"))
         {
-            SetAnimation(shoot_back, true, 1f); 
+            AddAnimation(shoot_back, true); 
         }
         else if (state.Equals("Hit"))
         {
@@ -83,7 +90,15 @@ public class SpinePlayer : MonoBehaviour
             SetAnimation(hit_Back, true, 1f);
         }
     }
-
+    public void AddAnimation(AnimationReferenceAsset animation, bool loop)
+    {
+        Spine.TrackEntry animationEntry = skeletonAnimationTrack.state.AddAnimation(1, animation, loop, 0);
+        animationEntry.Complete += AnimationEntry_Complete; 
+    }
+    private void AnimationEntry_Complete(Spine.TrackEntry trackentry)
+    {
+        skeletonAnimation.state.ClearTrack(1); 
+    }
     public void SpineMove()
     {
 

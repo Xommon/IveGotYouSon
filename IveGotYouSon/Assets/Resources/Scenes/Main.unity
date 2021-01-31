@@ -428,13 +428,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: hit
+      propertyPath: skeletonAnimationTrack
       value: 
-      objectReference: {fileID: 11400000, guid: 4611a7864271d754fa5c1cf4e8550f1e, type: 2}
-    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: hit_Back
-      value: 
-      objectReference: {fileID: 11400000, guid: d33c350d32545b94aa498c1275a444ec, type: 2}
+      objectReference: {fileID: 1403605351}
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1302,6 +1298,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1403605351 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8465915890114771667, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+  m_PrefabInstance: {fileID: 187750787}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1529000539
 GameObject:
   m_ObjectHideFlags: 0
