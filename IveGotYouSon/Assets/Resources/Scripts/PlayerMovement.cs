@@ -177,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
             if (hurt == true)
             {
                 Spine.SpineHit();
+                hurt = false;
             }
         }
     }
@@ -186,6 +187,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "TeddyBear")
         {
             bearCount++;
+            health++;
             Destroy(collision.gameObject);
         }
     }
@@ -193,5 +195,6 @@ public class PlayerMovement : MonoBehaviour
     public void takeDamage(int i) {
         health -= i;
         damageTimer = damageDelay;
+        hurt = true;
     }
 }

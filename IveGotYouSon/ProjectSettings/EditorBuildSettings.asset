@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Resources/Scenes/MainMenuIntro.unity
+    guid: 4d6485da564a4cd4c9ee0416432664a1
+  - enabled: 1
+    path: Assets/Resources/Scenes/CreditScreen.unity
+    guid: 5f2385be0e6f0a144aabbf5c7951bedc
+  - enabled: 1
+    path: Assets/Resources/Scenes/Main.unity
+    guid: cef596fcd216291478dd8c66832552d5
+  - enabled: 1
+    path: Assets/Resources/Scenes/IntroToGame.unity
+    guid: 9222e4c5907582a4b9741c26d78d6e9e
   m_configObjects: {}
