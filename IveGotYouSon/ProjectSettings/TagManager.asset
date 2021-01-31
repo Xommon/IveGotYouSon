@@ -19,7 +19,7 @@ TagManager:
   - Player
   - Trigger
   - Enemy
-  - 
+  - Darkness
   - 
   - 
   - 
@@ -57,4 +57,7 @@ TagManager:
     locked: 0
   - name: ForeWall
     uniqueID: 4129479361
+    locked: 0
+  - name: Darkness
+    uniqueID: 2799402861
     locked: 0
