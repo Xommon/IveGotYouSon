@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int facing;
     public GameObject hitboxStrike;
     public int health;
+    public GameObject vision;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
                 hitboxStrike.SetActive(true);
                 Invoke("DisableHitboxStrike", 0.15f);
 
-                if (moveX == 0 && moveY == 1)
+                /*if (moveX == 0 && moveY == 1)
                 {
                     facing = 1;
                     hitboxStrike.transform.position = transform.position + new Vector3(-0.5f, 0.5f, 0);
@@ -76,13 +77,16 @@ public class PlayerMovement : MonoBehaviour
                 {
                     facing = 8;
                     hitboxStrike.transform.position = transform.position + new Vector3(-0.5f, 0, 0);
-                }
+                }*/
             }
+
+            // Decrease vision over time
+            vision.transform.localScale -= new Vector3(0.001f, 0.001f, 0);
         }
     }
 
     void DisableHitboxStrike()
     {
-        hitboxStrike.SetActive(false);
+        //hitboxStrike.SetActive(false);
     }
 }
