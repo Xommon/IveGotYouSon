@@ -13,12 +13,16 @@ public class EnemyFollow : MonoBehaviour
     public bool attacking;
     public Vector3 foundPosition;
 
+    private GameObject bookSpine;
+
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
         enemyRenderer = GetComponent<EnemyRenderer>();
         startingPosition = transform.position;
+
+        bookSpine = GameObject.Find("Spine GameObjectBatBook");
     }
 
     // Update is called once per frame
@@ -55,12 +59,16 @@ public class EnemyFollow : MonoBehaviour
         else if (attacking)
         {
             transform.position = Vector3.MoveTowards(transform.position, foundPosition, speed / 500);
+            SpineBook Spine = bookSpine.GetComponent<SpineBook>();
+            Spine.SpineBookFlyFast();
         }
     }
 
     void StopDash()
     {
         attacking = false;
+        SpineBook Spine = bookSpine.GetComponent<SpineBook>();
+        Spine.SpineBookIdle(); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

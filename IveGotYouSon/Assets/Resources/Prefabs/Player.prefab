@@ -877,7 +877,7 @@ MonoBehaviour:
   - {fileID: 8059476830365932690}
   - {fileID: 6778727796684664547}
   closestDot: {fileID: 0}
-  rigidBody: {fileID: 0}
+  rigidBody: {fileID: 8465915889595991697}
 --- !u!58 &8465915889595991698
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -162,6 +162,8 @@ GameObject:
   - component: {fileID: 5315292836855170385}
   - component: {fileID: 5315292836855170387}
   - component: {fileID: 5315292836855170380}
+  - component: {fileID: 1132757321}
+  - component: {fileID: 1132757322}
   m_Layer: 11
   m_Name: EnemyBook
   m_TagString: Untagged
@@ -264,7 +266,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -272,3 +274,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1132757321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5315292836855170381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98af29368ddf194aa2d3da9cd4a2434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 0}
+  meshRenderer: {fileID: 1421401028234473778}
+--- !u!114 &1132757322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5315292836855170381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 143df34920ab9de438cf377b26896e21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  speed: 17
+  player: {fileID: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  enemyRenderer: {fileID: 1132757321}
+  flying: 1
+  attacking: 0
+  foundPosition: {x: 0, y: 0, z: 0}

@@ -41,7 +41,7 @@ public class SpineBook : MonoBehaviour
         }
         else if (state.Equals("Fly_Fast"))
         {
-            SetAnimation(fly_Fast, true, 1f); 
+            SetAnimation(fly_Fast, true, 1.75f); 
         }
     }
     public void SpineBookIdle()
@@ -50,7 +50,24 @@ public class SpineBook : MonoBehaviour
 
         if (flipAnimation == false)
         {
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+    }
 
+    public void SpineBookFlyFast()
+    {
+        SetCharacterState("Fly_Fast");
+        if (flipAnimation == false)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1f, 1f);
         }
     }
 
