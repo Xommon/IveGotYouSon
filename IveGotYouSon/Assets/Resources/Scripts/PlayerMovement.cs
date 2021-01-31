@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject hitboxStrike;
     public int health;
     public GameObject vision;
+    public GameObject[] hearts;
+    public Sprite[] heartSprites;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
@@ -27,6 +30,19 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // HUD hearts to represent health
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (health - 1 < i)
+            {
+                hearts[i].GetComponent<Image>().sprite = heartSprites[1];
+            }
+            else
+            {
+                hearts[i].GetComponent<Image>().sprite = heartSprites[0];
+            }
+        }
+
 		if (health > 0)
         {
             moveX = Input.GetAxisRaw("Horizontal");
