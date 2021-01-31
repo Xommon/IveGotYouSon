@@ -14,6 +14,11 @@ public class Pillow : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rigidBody.velocity = direction * speed;
+        //rigidBody.velocity = new Vector2(direction.x * speed, direction.y * speed);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(this.gameObject);
     }
 }
