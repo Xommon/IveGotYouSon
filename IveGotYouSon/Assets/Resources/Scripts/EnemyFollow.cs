@@ -59,8 +59,8 @@ public class EnemyFollow : MonoBehaviour
         else if (attacking)
         {
             transform.position = Vector3.MoveTowards(transform.position, foundPosition, speed / 500);
-            SpineBook Spine = bookSpine.GetComponent<SpineBook>();
-            Spine.SpineBookFlyFast();
+            //SpineBook Spine = bookSpine.GetComponent<SpineBook>();
+            //Spine.SpineBookFlyFast();
         }
     }
 
@@ -68,7 +68,7 @@ public class EnemyFollow : MonoBehaviour
     {
         attacking = false;
         SpineBook Spine = bookSpine.GetComponent<SpineBook>();
-        Spine.SpineBookIdle(); 
+        //Spine.SpineBookIdle(); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

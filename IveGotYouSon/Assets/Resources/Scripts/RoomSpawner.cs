@@ -26,9 +26,9 @@ public class RoomSpawner : MonoBehaviour
 
 	void Spawn()
 	{
-		if(spawned == false)
+		if (spawned == false)
 		{
-			if(openingDirection == 1)
+			if (openingDirection == 1)
 			{
 				// Need to spawn a room with a BOTTOM door.
 				rand = Random.Range(0, templates.bottomRooms.Length);
