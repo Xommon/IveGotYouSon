@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject currentRoom;
     public SpriteRenderer[] aimDots;
     public SpriteRenderer closestDot;
+    public bool hurt;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         vision.SetActive(true);
         darkness.SetActive(true);
+        hurt = false;
     }
 
     public static Vector3 GetMouseWorldPosition()
@@ -109,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
             vision.transform.localScale -= new Vector3(0.001f, 0.001f, 0);
 
             SpinePlayer Spine = PlayerSpine.GetComponent<SpinePlayer>(); 
-            if (moveX == 0 && moveY == 0 && Input.GetMouseButtonUp(0))
+            if (moveX == 0 && moveY == 0)
             {
                 Spine.SpineStand(); 
             }

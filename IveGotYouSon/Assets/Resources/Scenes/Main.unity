@@ -267,7 +267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc2954d78972346459342642964b026a, type: 3}
@@ -408,6 +408,10 @@ PrefabInstance:
       propertyPath: rigidBody
       value: 
       objectReference: {fileID: 958873998}
+    - target: {fileID: 8465915889595991699, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: currentRoom
+      value: 
+      objectReference: {fileID: 691380980}
     - target: {fileID: 8465915889595991700, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -468,6 +472,10 @@ PrefabInstance:
       propertyPath: shoot_back
       value: 
       objectReference: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
+    - target: {fileID: 8465915890114771668, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1177,7 +1185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290173426071092430, guid: a95bbcd9dd1c32f47885cc2b60b946b0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290173426071092430, guid: a95bbcd9dd1c32f47885cc2b60b946b0, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a95bbcd9dd1c32f47885cc2b60b946b0, type: 3}
@@ -1238,7 +1250,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2290173426071092430, guid: a7d658211f713184a97463add6f7b118, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2290173426071092430, guid: a7d658211f713184a97463add6f7b118, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7d658211f713184a97463add6f7b118, type: 3}
@@ -1394,7 +1410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  speed: 17
+  speed: 25
   player: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   enemyRenderer: {fileID: 1132757321}
@@ -1625,6 +1641,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1334206760 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2290173426071092430, guid: a7d658211f713184a97463add6f7b118, type: 3}
+  m_PrefabInstance: {fileID: 1109003297}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1334206765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334206760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98af29368ddf194aa2d3da9cd4a2434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 691380980}
+  meshRenderer: {fileID: 0}
 --- !u!1 &1529000539
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1806,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590159822}
   m_CullTransparentMesh: 0
+--- !u!1 &1593484636 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2290173426071092430, guid: a95bbcd9dd1c32f47885cc2b60b946b0, type: 3}
+  m_PrefabInstance: {fileID: 1024884822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1593484641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593484636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98af29368ddf194aa2d3da9cd4a2434, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 691380980}
+  meshRenderer: {fileID: 0}
 --- !u!1 &1798038151
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,6 +2308,10 @@ PrefabInstance:
     - target: {fileID: 5315292836855170385, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
       propertyPath: m_FlipX
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5315292836855170387, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
