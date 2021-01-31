@@ -1,34 +1,76 @@
 
 father.png
-size: 734,263
+size: 1124,520
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-fr01
-  rotate: false
-  xy: 185, 2
-  size: 181, 259
-  orig: 181, 259
+Dad/arm
+  rotate: true
+  xy: 2, 10
+  size: 87, 369
+  orig: 87, 369
   offset: 0, 0
   index: -1
-fr02
+Dad/backhead
   rotate: false
-  xy: 368, 2
-  size: 181, 259
-  orig: 181, 259
+  xy: 828, 218
+  size: 294, 300
+  orig: 294, 300
   offset: 0, 0
   index: -1
-fr03
+Dad/body
   rotate: false
-  xy: 551, 2
-  size: 181, 259
-  orig: 181, 259
+  xy: 559, 149
+  size: 267, 369
+  orig: 267, 369
   offset: 0, 0
   index: -1
-fr04
+Dad/eyes
   rotate: false
-  xy: 2, 2
-  size: 181, 259
-  orig: 181, 259
+  xy: 266, 143
+  size: 124, 28
+  orig: 124, 28
+  offset: 0, 0
+  index: -1
+Dad/head
+  rotate: false
+  xy: 266, 173
+  size: 291, 345
+  orig: 291, 345
+  offset: 0, 0
+  index: -1
+Dad/leg
+  rotate: true
+  xy: 373, 24
+  size: 117, 305
+  orig: 117, 305
+  offset: 0, 0
+  index: -1
+Dad/shadow
+  rotate: true
+  xy: 2, 99
+  size: 419, 262
+  orig: 419, 262
+  offset: 0, 0
+  index: -1
+Dad/shadow_head
+  rotate: false
+  xy: 680, 2
+  size: 230, 145
+  orig: 230, 145
+  offset: 0, 0
+  index: -1
+Dad/shoe
+  rotate: false
+  xy: 912, 104
+  size: 157, 112
+  orig: 157, 112
+  offset: 0, 0
+  index: -1
+Dad/shoe_back
+  rotate: false
+  xy: 912, 6
+  size: 163, 96
+  orig: 163, 96
   offset: 0, 0
   index: -1

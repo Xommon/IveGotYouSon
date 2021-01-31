@@ -353,6 +353,8 @@ MonoBehaviour:
   - {fileID: 3449090630262626322}
   wallSprites: []
   floor: {fileID: 6481413339910299120}
+  player: {fileID: 0}
+  playerMovement: {fileID: 0}
   playerPresent: 0
 --- !u!61 &2200344842937399139
 BoxCollider2D:

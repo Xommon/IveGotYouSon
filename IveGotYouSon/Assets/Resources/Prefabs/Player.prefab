@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1495564435
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 74e93f717845e1e4dad5ffde888d91ed, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8465915889595991698}
   - component: {fileID: 8465915889595991697}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,12 +628,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skeletonAnimation: {fileID: 8465915890114771667}
-  walk: {fileID: 11400000, guid: f368496f21bfe2a408bbb2c7e4c8a0f9, type: 2}
+  walk: {fileID: 11400000, guid: 1b6b3376d5c040e4b8c0b43116ecb91c, type: 2}
   walk_Back: {fileID: 11400000, guid: e5101c5334207014abf7a26cb33afb8b, type: 2}
-  stand: {fileID: 11400000, guid: e40bc9b1bb5cb644aa5c68099a58a54a, type: 2}
-  stand_Back: {fileID: 11400000, guid: bdb5c4f91708b3e4aa91d20f259c23d4, type: 2}
-  hit: {fileID: 11400000, guid: 419edd2d763dcae4fba2b896df37a70c, type: 2}
-  hit_Back: {fileID: 11400000, guid: 5a5bab447d71a244b8221ac702cdc43a, type: 2}
+  stand: {fileID: 11400000, guid: a2129028f21b22e4c988b0f4c0786c34, type: 2}
+  stand_Back: {fileID: 11400000, guid: c66d9a62b5c487045a634e7d7c8e2e2c, type: 2}
+  hit: {fileID: 0}
+  hit_Back: {fileID: 0}
   currentState: 
   currentAnimation: 
   backAnimation: 0

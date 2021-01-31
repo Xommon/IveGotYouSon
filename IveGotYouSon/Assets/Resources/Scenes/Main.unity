@@ -358,6 +358,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: stand
+      value: 
+      objectReference: {fileID: 11400000, guid: a28ff5c343f189a47ba7874ecc24a66e, type: 2}
+    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: stand_Back
+      value: 
+      objectReference: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1124,14 +1132,6 @@ PrefabInstance:
     - target: {fileID: 1384366362914734, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
       propertyPath: m_Name
       value: Entry Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 4157197769124990, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4157197769124990, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4284646200961232, guid: 10c65f0c164d2e04e9c3daf97304609a, type: 3}
       propertyPath: m_LocalPosition.x

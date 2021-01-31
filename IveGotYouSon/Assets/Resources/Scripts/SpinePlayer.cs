@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class SpinePlayer : MonoBehaviour
 {
     public SkeletonAnimation skeletonAnimation;
-    public AnimationReferenceAsset walk,walk_Back, stand, stand_Back, hit, hit_Back;
+    public AnimationReferenceAsset walk,walk_Back, stand, stand_Back, hit, hit_Back, shoot, shoot_back;
     public string currentState;
     public string currentAnimation;
 
@@ -54,13 +54,21 @@ public class SpinePlayer : MonoBehaviour
         {
             SetAnimation(stand, true, 1f);
         }
+        else if (state.Equals("Stand_Back"))
+        {
+            SetAnimation(stand_Back, true, 1f); 
+        }
         else if (state.Equals("Walk"))
         {
-            SetAnimation(walk, true, 1f);
+            SetAnimation(walk, true, 1.8f);
         }
         else if (state.Equals("Walk_Back"))
         {
-            SetAnimation(walk_Back, true, 1f);
+            SetAnimation(walk_Back, true, 1.8f);
+        }
+        else if (state.Equals("Shoot"))
+        {
+
         }
     }
 
