@@ -68,7 +68,11 @@ public class SpinePlayer : MonoBehaviour
         }
         else if (state.Equals("Shoot"))
         {
-
+            SetAnimation(shoot, true, 1f); 
+        }
+        else if (state.Equals("Shoot_Back"))
+        {
+            SetAnimation(shoot_back, true, 1f); 
         }
     }
 
@@ -101,6 +105,17 @@ public class SpinePlayer : MonoBehaviour
         else
         {
             SetCharacterState("Stand_Back"); 
+        }
+    }
+    public void SpineShoot()
+    {
+        if (backAnimation == false)
+        {
+            SetCharacterState("Shoot");
+        }
+        else
+        {
+            SetCharacterState("Shoot_Back"); 
         }
     }
 }

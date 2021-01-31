@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -108,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
             vision.transform.localScale -= new Vector3(0.001f, 0.001f, 0);
 
             SpinePlayer Spine = PlayerSpine.GetComponent<SpinePlayer>(); 
-            if (moveX == 0 && moveY == 0)
+            if (moveX == 0 && moveY == 0 && Input.GetMouseButtonUp(0))
             {
                 Spine.SpineStand(); 
             }
@@ -132,6 +133,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Spine.flipAnimation = true; 
                 }
+            }
+            if (Input.GetMouseButtonDown(0))
+            {
+                Spine.SpineShoot(); 
             }
         }
     }
