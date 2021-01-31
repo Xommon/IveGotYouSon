@@ -27,6 +27,6 @@ public class PlayerMovement : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
         rigidBody.velocity = speed * (moveX * xTranslation + moveY * yTranslation).normalized;
-        PlayerFatherSpine.GetComponent<SpinePlayerMovement>().StartPlayingWalking();
+        PlayerFatherSpine.GetComponent<SpinePlayer>().SpineMove();
     }
 }
