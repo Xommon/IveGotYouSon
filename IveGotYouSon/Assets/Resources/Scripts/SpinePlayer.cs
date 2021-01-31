@@ -83,11 +83,11 @@ public class SpinePlayer : MonoBehaviour
         }
         else if (state.Equals("Hit"))
         {
-            AddAnimation(hit, true);
+            AddAnimation(hit, false);
         }
         else if (state.Equals("Hit_Back"))
         {
-            AddAnimation(hit_Back, true);
+            AddAnimation(hit_Back, false);
         }
     }
     public void AddAnimation(AnimationReferenceAsset animation, bool loop)
