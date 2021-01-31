@@ -146,6 +146,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 Spine.SpineShoot(); 
             }
+            if (hurt == true)
+            {
+                Spine.SpineHit();
+            }
         }
     }
 

@@ -878,6 +878,7 @@ MonoBehaviour:
   - {fileID: 6778727796684664547}
   closestDot: {fileID: 0}
   hurt: 0
+  debugValues: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 8465915889595991697}
 --- !u!50 &8465915889595991697
 Rigidbody2D:
