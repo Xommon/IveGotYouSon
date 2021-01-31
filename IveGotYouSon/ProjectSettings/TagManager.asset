@@ -59,6 +59,9 @@ TagManager:
   - name: ForeWall
     uniqueID: 4129479361
     locked: 0
+  - name: FX
+    uniqueID: 569456197
+    locked: 0
   - name: Darkness
     uniqueID: 2799402861
     locked: 0

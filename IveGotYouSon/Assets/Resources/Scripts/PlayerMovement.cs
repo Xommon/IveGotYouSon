@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public int facing;
     public int health;
-    public int bears;
+    public int bearCount;
     public int level = 1;
     public GameObject vision;
     public GameObject[] hearts;
+    public GameObject[] bears;
     public Sprite[] heartSprites;
+    public Sprite[] bearSprites;
     public GameObject pillow;
 
     static Vector2 xTranslation = new Vector2(1, 1);
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // HUD hearts to represent health
+        // HUD hearts and bears
         for (int i = 0; i < hearts.Length; i++)
         {
             if (health - 1 < i)
@@ -42,6 +44,18 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 hearts[i].GetComponent<Image>().sprite = heartSprites[0];
+            }
+        }
+
+        for (int i = 0; i < bears.Length; i++)
+        {
+            if (bearCount - 1 < i)
+            {
+                bears[i].GetComponent<Image>().sprite = bearSprites[1];
+            }
+            else
+            {
+                bears[i].GetComponent<Image>().sprite = bearSprites[0];
             }
         }
 
