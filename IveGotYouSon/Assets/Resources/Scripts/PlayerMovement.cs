@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite[] heartSprites;
     public Sprite[] bearSprites;
     public GameObject pillow;
+    public GameObject currentRoom;
 
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
