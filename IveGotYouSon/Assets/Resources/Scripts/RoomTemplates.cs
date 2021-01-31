@@ -15,7 +15,7 @@ public class RoomTemplates : MonoBehaviour
 
 	public float waitTime;
 	private bool spawnedBoss;
-	public GameObject boss;
+	public GameObject son;
 	public GameObject teddyBear;
 
 	void Update()
@@ -26,13 +26,13 @@ public class RoomTemplates : MonoBehaviour
 			{
 				if (i == rooms.Count - 1)
 				{
-					Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+					GameObject createSon = Instantiate(son, rooms[i].transform.position, Quaternion.identity);
+					createSon.GetComponent<FurnitureRenderer>().room = rooms[rooms.Count - 1];
 					spawnedBoss = true;
 
                     for (int i2 = 0; i2 < 3; i2++)
                     {
 						GameObject pickedRoom = rooms[Random.Range(0, rooms.Count)];
-						//Debug.Log(pickedRoom);
 						if(pickedRoom.GetComponent<ContentRandomzier>())Instantiate(teddyBear, pickedRoom.transform.position + pickedRoom.GetComponent<ContentRandomzier>().spawnPoints[Random.Range(0, pickedRoom.GetComponent<ContentRandomzier>().spawnPoints.Count)].transform.position, Quaternion.identity);
                     }
 				}
