@@ -1,0 +1,41 @@
+
+BatBook.png
+size: 1080,634
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BatBook/Paper_02
+  rotate: false
+  xy: 473, 2
+  size: 471, 235
+  orig: 471, 235
+  offset: 0, 0
+  index: -1
+BatBook/cover_01
+  rotate: false
+  xy: 2, 253
+  size: 549, 379
+  orig: 549, 379
+  offset: 0, 0
+  index: -1
+BatBook/cover_02
+  rotate: false
+  xy: 2, 8
+  size: 469, 243
+  orig: 469, 243
+  offset: 0, 0
+  index: -1
+BatBook/face
+  rotate: true
+  xy: 946, 111
+  size: 126, 132
+  orig: 126, 132
+  offset: 0, 0
+  index: -1
+BatBook/papper_01
+  rotate: false
+  xy: 553, 239
+  size: 515, 393
+  orig: 515, 393
+  offset: 0, 0
+  index: -1
