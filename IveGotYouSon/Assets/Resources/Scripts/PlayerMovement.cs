@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         vision.SetActive(true);
         darkness.SetActive(true);
         hurt = false;
-        debugObject = Instantiate(debugObject, transform.position + new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+        //debugObject = Instantiate(debugObject, transform.position + new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
     }
 
     public Vector3 GetMouseWorldPositionOld()
