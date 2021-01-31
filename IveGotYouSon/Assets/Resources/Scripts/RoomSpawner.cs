@@ -26,9 +26,9 @@ public class RoomSpawner : MonoBehaviour
 
 	void Spawn()
 	{
-		if(spawned == false)
+		if (spawned == false)
 		{
-			if(openingDirection == 1)
+			if (openingDirection == 1)
 			{
 				// Need to spawn a room with a BOTTOM door.
 				rand = Random.Range(0, templates.bottomRooms.Length);
@@ -60,7 +60,7 @@ public class RoomSpawner : MonoBehaviour
 	{
 		if (other.CompareTag("SpawnPoint"))
 		{
-			if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
+			if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false && templates.closedRoom != null)
 			{
 				Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
 				Destroy(gameObject);
