@@ -1,0 +1,41 @@
+
+intro.png
+size: 1978,1519
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+intro/Layer 8
+  rotate: true
+  xy: 2, 2
+  size: 433, 878
+  orig: 433, 878
+  offset: 0, 0
+  index: -1
+intro/ref
+  rotate: false
+  xy: 2, 437
+  size: 1920, 1080
+  orig: 1920, 1080
+  offset: 0, 0
+  index: -1
+intro/text1
+  rotate: true
+  xy: 1924, 304
+  size: 1213, 52
+  orig: 1213, 52
+  offset: 0, 0
+  index: -1
+intro/text2
+  rotate: false
+  xy: 882, 342
+  size: 136, 40
+  orig: 136, 40
+  offset: 0, 0
+  index: -1
+intro/text3
+  rotate: false
+  xy: 882, 384
+  size: 433, 51
+  orig: 433, 51
+  offset: 0, 0
+  index: -1
