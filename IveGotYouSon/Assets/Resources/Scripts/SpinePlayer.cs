@@ -74,6 +74,14 @@ public class SpinePlayer : MonoBehaviour
         {
             SetAnimation(shoot_back, true, 1f); 
         }
+        else if (state.Equals("Hit"))
+        {
+            SetAnimation(hit, true, 1f);
+        }
+        else if (state.Equals("Hit_Back"))
+        {
+            SetAnimation(hit_Back, true, 1f);
+        }
     }
 
     public void SpineMove()
@@ -116,6 +124,33 @@ public class SpinePlayer : MonoBehaviour
         else
         {
             SetCharacterState("Shoot_Back"); 
+        }
+        if (flipAnimation == false)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1f, 1f);
+        }
+    }
+    public void SpineHit()
+    {
+        if (backAnimation == false)
+        {
+            SetCharacterState("Hit");
+        }
+        else
+        {
+            SetCharacterState("Hit_Back");
+        }
+        if (flipAnimation == false)
+        {
+            transform.localScale = new Vector2(1f, 1f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(-1f, 1f);
         }
     }
 }
