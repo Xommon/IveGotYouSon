@@ -267,7 +267,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 20
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -289,6 +289,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 2
   speed: 4
+  player: {fileID: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  enemyRenderer: {fileID: 1485607542034060192}
 --- !u!114 &1485607542034060192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room: {fileID: 0}
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 1485607541974828106}
 --- !u!1 &1485607542720767205
 GameObject:
   m_ObjectHideFlags: 0
