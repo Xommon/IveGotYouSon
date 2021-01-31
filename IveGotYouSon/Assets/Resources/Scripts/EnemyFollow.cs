@@ -14,6 +14,7 @@ public class EnemyFollow : MonoBehaviour
     public Vector3 foundPosition;
 
     private GameObject bookSpine;
+    private GameObject vacSpine;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class EnemyFollow : MonoBehaviour
         startingPosition = transform.position;
 
         bookSpine = GameObject.Find("SpineGameObjectBatBook");
+        vacSpine = GameObject.Find("SpineGameObjectVacuum");
     }
 
     // Update is called once per frame
@@ -48,6 +50,17 @@ public class EnemyFollow : MonoBehaviour
         if (!flying)
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, speed / 500);
+
+            SpineVacuum vacspine = vacSpine.GetComponent<SpineVacuum>();
+            vacspine.SpineVacWalk();
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                vacspine.flipAnimation = false; 
+            }
+            else
+            {
+                vacspine.flipAnimation = true; 
+            }
         }
 
         if (!attacking && Vector3.Distance(transform.position, player.transform.position) < 7 && flying)
@@ -61,6 +74,14 @@ public class EnemyFollow : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, foundPosition, speed / 500);
             SpineBook Spine = bookSpine.GetComponent<SpineBook>();
             Spine.SpineBookFlyFast();
+            if (player.transform.position.x > this.transform.position.x)
+            {
+                Spine.flipAnimation = false;
+            }
+            else
+            {
+                Spine.flipAnimation = true;
+            }
         }
     }
 

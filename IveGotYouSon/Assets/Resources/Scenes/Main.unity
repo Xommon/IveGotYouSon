@@ -1473,6 +1473,40 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!1 &1770804296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1485607541974828111, guid: fc2954d78972346459342642964b026a, type: 3}
+  m_PrefabInstance: {fileID: 11508227}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1770804298 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1485607541974828105, guid: fc2954d78972346459342642964b026a, type: 3}
+  m_PrefabInstance: {fileID: 11508227}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770804296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1770804301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770804296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e690302d1983f46ad8ed750f1e0b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1770804298}
+  idle: {fileID: 11400000, guid: 7ecf8f011c7820d41bf548445e35f340, type: 2}
+  walk: {fileID: 11400000, guid: bc913caddc907f04ebf97d6e2bd28225, type: 2}
+  currentState: 
+  currentAnimation: 
+  flipAnimation: 0
 --- !u!1 &1798038151
 GameObject:
   m_ObjectHideFlags: 0
