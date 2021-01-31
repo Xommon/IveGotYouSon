@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class Pillow : MonoBehaviour
 {
-    public Vector3 direction;
+    public Vector2 direction;
+    Rigidbody2D rigidBody;
+    public float speed;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        transform.position += direction * 0.2f;
+        rigidBody = GetComponent<Rigidbody2D>();
+    }
+    void FixedUpdate()
+    {
+        rigidBody.velocity = direction * speed;
     }
 }
