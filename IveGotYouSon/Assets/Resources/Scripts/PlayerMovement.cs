@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public int bearCount;
     public int level = 1;
     public GameObject vision;
+    public GameObject darkness;
     public GameObject[] hearts;
     public GameObject[] bears;
     public Sprite[] heartSprites;
@@ -25,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     static Vector2 xTranslation = new Vector2(1, 1);
     static Vector2 yTranslation = new Vector2(-1, 1);
 
-    Rigidbody2D rigidBody;
+    public Rigidbody2D rigidBody;
 
     private GameObject PlayerFatherSpine;
 
@@ -33,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
     {
         PlayerFatherSpine = GameObject.Find("SpineGameObject");
         rigidBody = GetComponent<Rigidbody2D>();
+        vision.SetActive(true);
+        darkness.SetActive(true);
     }
 
     void FixedUpdate()

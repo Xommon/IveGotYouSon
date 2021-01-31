@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
     public PlayerMovement player;
     public Vector3 startingPosition;
     public EnemyRenderer enemyRenderer;
+    public bool flying;
 
     // Start is called before the first frame update
     void Start()
