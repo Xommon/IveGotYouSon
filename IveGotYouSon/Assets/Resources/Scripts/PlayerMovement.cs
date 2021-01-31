@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     public int facing;
     public int health;
     public int bearCount;
+    public float fireDelay;
+    public float fireTimer;
     public int level = 1;
     public GameObject vision;
     public GameObject darkness;
@@ -42,19 +44,40 @@ public class PlayerMovement : MonoBehaviour
         vision.SetActive(true);
         darkness.SetActive(true);
         hurt = false;
+        debugObject = Instantiate(debugObject, transform.position + new Vector3(0, 0, 0), Quaternion.Euler(new Vector3(0, 0, 0)));
+    }
+
+    public Vector3 GetMouseWorldPositionOld()
+    {
+        // Mouse position
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10.0f;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        mousePos.z = 0;
+        Vector2 mousePos2d = new Vector2(mousePos.x, mousePos.y);
+        print("Aim: " + mousePos2d.normalized);
+        return mousePos2d;
     }
 
     public Vector3 GetMouseWorldPosition()
     {
-        // Mouse position
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 0.0f;
-        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-        return mousePos;
+        Vector3 worldPosition;
+        Plane plane = new Plane(-Vector3.forward, 0);
+
+        float distance;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (plane.Raycast(ray, out distance))
+        {
+            worldPosition = ray.GetPoint(distance);
+            //print("Aim: " + worldPosition.normalized);
+            return worldPosition;
+        }
+        return new Vector3(0,0,0);
     }
 
     void FixedUpdate()
     {
+        if (fireTimer > 0) fireTimer -= Time.fixedDeltaTime;
         // HUD hearts and bears
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -101,14 +124,16 @@ public class PlayerMovement : MonoBehaviour
                 aimY = moveY;
             }
 
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Fire1") && fireTimer<=0)
             {
+                print("pillow thrown");
                 /*Vector3 shootDirection;
                 shootDirection = Input.mousePosition;
                 shootDirection.z = 0.0f;
                 shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
                 shootDirection = shootDirection - transform.position;*/
                 Instantiate(pillow, transform.position + new Vector3(0, 0, -0.55f), Quaternion.Euler(new Vector3(0, 0, 0)));
+                fireTimer = fireDelay;
                 //newPillow.GetComponent<Rigidbody2D>().velocity = new Vector2(GetMouseWorldPosition().x * newPillow.GetComponent<Pillow>().speed, GetMouseWorldPosition().y * newPillow.GetComponent<Pillow>().speed);
                 //newPillow.GetComponent<Rigidbody2D>().velocity = debugValues;
             }

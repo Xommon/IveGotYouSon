@@ -878,6 +878,7 @@ MonoBehaviour:
   - {fileID: 6778727796684664547}
   closestDot: {fileID: 0}
   hurt: 0
+  debugObject: {fileID: 3390349001426903759, guid: 6b42134a2c7a9974d9e3c79bb9e9381f, type: 3}
   debugValues: {x: 0, y: 0, z: 0}
   rigidBody: {fileID: 8465915889595991697}
 --- !u!50 &8465915889595991697

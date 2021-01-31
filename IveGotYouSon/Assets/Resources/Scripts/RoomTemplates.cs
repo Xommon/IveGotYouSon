@@ -32,7 +32,7 @@ public class RoomTemplates : MonoBehaviour
                     for (int i2 = 0; i2 < 3; i2++)
                     {
 						GameObject pickedRoom = rooms[Random.Range(0, rooms.Count)];
-						Debug.Log(pickedRoom);
+						//Debug.Log(pickedRoom);
 						if(pickedRoom.GetComponent<ContentRandomzier>())Instantiate(teddyBear, pickedRoom.transform.position + pickedRoom.GetComponent<ContentRandomzier>().spawnPoints[Random.Range(0, pickedRoom.GetComponent<ContentRandomzier>().spawnPoints.Count)].transform.position, Quaternion.identity);
                     }
 				}

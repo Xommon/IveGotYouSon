@@ -7,8 +7,9 @@ public class Pillow : MonoBehaviour
     public Vector2 direction;
     Rigidbody2D rigidBody;
     public float speed;
-    public Vector3 target;
+    public Vector2 target;
     public PlayerMovement player;
+    bool targetSet = false;
 
     private void Start()
     {
@@ -20,7 +21,8 @@ public class Pillow : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += Vector3.MoveTowards(transform.position, target, speed/500);
+        
+        rigidBody.velocity = target.normalized * speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

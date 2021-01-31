@@ -49,7 +49,7 @@ public class ContentRandomzier : MonoBehaviour
             }
         }
         catch (System.ArgumentOutOfRangeException e){
-            print(e + ": this is fine probably");
+            //print(e + ": this is fine probably");
         }
     }
 
