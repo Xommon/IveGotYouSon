@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 5315292836855170385}
   - component: {fileID: 5315292836855170387}
   - component: {fileID: 5315292836855170380}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyBook
   m_TagString: Untagged
   m_Icon: {fileID: 0}

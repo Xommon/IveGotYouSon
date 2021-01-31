@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 1485607542034060219}
   - component: {fileID: 1485607542034060197}
   - component: {fileID: 1485607542034060192}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemyVacuum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,6 +292,7 @@ MonoBehaviour:
   player: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   enemyRenderer: {fileID: 1485607542034060192}
+  flying: 0
 --- !u!114 &1485607542034060192
 MonoBehaviour:
   m_ObjectHideFlags: 0
