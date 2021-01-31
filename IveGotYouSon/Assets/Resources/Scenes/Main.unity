@@ -359,11 +359,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: stand
-      value: 
-      objectReference: {fileID: 11400000, guid: a28ff5c343f189a47ba7874ecc24a66e, type: 2}
-    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: stand_Back
+      value: 
+      objectReference: {fileID: 11400000, guid: 415e4a0c7dc99e1428b5368a9d69d0ff, type: 2}
+    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: shoot
+      value: 
+      objectReference: {fileID: 11400000, guid: 706686f5adb59cb479d890b1a73cf663, type: 2}
+    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: shoot_back
       value: 
       objectReference: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
