@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
                 hitboxStrike.SetActive(true);
                 Invoke("DisableHitboxStrike", 0.15f);
 
-                /*if (moveX == 0 && moveY == 1)
+                if (moveX == 0 && moveY == 1)
                 {
                     facing = 1;
                     hitboxStrike.transform.position = transform.position + new Vector3(-0.5f, 0.5f, 0);
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     facing = 8;
                     hitboxStrike.transform.position = transform.position + new Vector3(-0.5f, 0, 0);
-                }*/
+                }
             }
 
             // Decrease vision over time
@@ -87,6 +87,6 @@ public class PlayerMovement : MonoBehaviour
 
     void DisableHitboxStrike()
     {
-        //hitboxStrike.SetActive(false);
+        hitboxStrike.SetActive(false);
     }
 }
