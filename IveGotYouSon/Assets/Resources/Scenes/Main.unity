@@ -193,18 +193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1485607541974828104, guid: fc2954d78972346459342642964b026a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485607541974828104, guid: fc2954d78972346459342642964b026a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485607541974828104, guid: fc2954d78972346459342642964b026a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1485607541974828107, guid: fc2954d78972346459342642964b026a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -260,14 +248,6 @@ PrefabInstance:
     - target: {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
       propertyPath: m_Name
       value: EnemyVacuum
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485607542034060218, guid: fc2954d78972346459342642964b026a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc2954d78972346459342642964b026a, type: 3}
@@ -459,29 +439,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: stand_Back
-      value: 
-      objectReference: {fileID: 11400000, guid: 415e4a0c7dc99e1428b5368a9d69d0ff, type: 2}
-    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: shoot
-      value: 
-      objectReference: {fileID: 11400000, guid: 706686f5adb59cb479d890b1a73cf663, type: 2}
-    - target: {fileID: 8465915890114771666, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: shoot_back
-      value: 
-      objectReference: {fileID: 11400000, guid: d6b421005867382448682e8994c35d67, type: 2}
-    - target: {fileID: 8465915890114771668, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8648185813863375169, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
@@ -1047,40 +1007,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694600515}
   m_CullTransparentMesh: 0
---- !u!1 &953878690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1421401028234473781, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-  m_PrefabInstance: {fileID: 1421401027852775863}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &953878692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1421401028234473779, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-  m_PrefabInstance: {fileID: 1421401027852775863}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953878690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &953878695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 953878690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f45730b20f7bb943bc3b09484ad3e91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skeletonAnimation: {fileID: 953878692}
-  idle: {fileID: 11400000, guid: 693a488dd59b6a446b9fd5f398499ec4, type: 2}
-  fly_Fast: {fileID: 11400000, guid: 878e041ef6214d942a982b5992cce445, type: 2}
-  currentState: 
-  currentAnimation: 
-  flipAnimation: 0
 --- !u!1 &964894798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1966,17 +1892,9 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 1421401028234473781, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-      propertyPath: m_Name
-      value: SpineGameObjectBatBook
-      objectReference: {fileID: 0}
     - target: {fileID: 5315292836855170381, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
       propertyPath: m_Name
       value: EnemyBook
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315292836855170381, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5315292836855170384, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2021,18 +1939,6 @@ PrefabInstance:
     - target: {fileID: 5315292836855170384, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315292836855170385, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315292836855170385, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5315292836855170387, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5036567b4aa6b2f4e89f3d1076f509b2, type: 3}
