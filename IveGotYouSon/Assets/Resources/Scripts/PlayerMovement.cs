@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public int facing;
     public int health;
+    public int bears;
+    public int level = 1;
     public GameObject vision;
     public GameObject[] hearts;
     public Sprite[] heartSprites;
