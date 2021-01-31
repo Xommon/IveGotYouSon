@@ -25,7 +25,7 @@ public class SpinePlayer : MonoBehaviour
     void Update()
     {
  
-            SpineMove(); 
+            //SpineMove(); 
     }
 
     public void SetAnimation(AnimationReferenceAsset animation, bool loop, float timeScale)
@@ -86,6 +86,13 @@ public class SpinePlayer : MonoBehaviour
     }
     public void SpineStand ()
     {
-        SetCharacterState("Stand");
+        if (backAnimation == false)
+        {
+            SetCharacterState("Stand");
+        }
+        else
+        {
+            SetCharacterState("Stand_Back"); 
+        }
     }
 }

@@ -28,11 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rigidBody;
 
-    private GameObject PlayerFatherSpine;
+    private GameObject PlayerSpine;
 
     void Start()
     {
-        PlayerFatherSpine = GameObject.Find("SpineGameObject");
+        PlayerSpine = GameObject.Find("SpineGameObject");
         rigidBody = GetComponent<Rigidbody2D>();
         vision.SetActive(true);
         darkness.SetActive(true);
@@ -135,6 +135,33 @@ public class PlayerMovement : MonoBehaviour
 
             // Decrease vision over time
             vision.transform.localScale -= new Vector3(0.001f, 0.001f, 0);
+
+            SpinePlayer Spine = PlayerSpine.GetComponent<SpinePlayer>(); 
+            if (moveX == 0 && moveY == 0)
+            {
+                Spine.SpineStand(); 
+            }
+
+            else
+            {
+                Spine.SpineMove(); 
+                if (moveY < 0)
+                {
+                    Spine.backAnimation = false;
+                }
+                else
+                {
+                    Spine.backAnimation = true; 
+                }
+                if (moveX < 0)
+                {
+                    Spine.flipAnimation = false; 
+                }
+                else
+                {
+                    Spine.flipAnimation = true; 
+                }
+            }
         }
     }
 }
