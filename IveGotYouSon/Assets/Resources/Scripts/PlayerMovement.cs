@@ -135,4 +135,13 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "TeddyBear")
+        {
+            bearCount++;
+            Destroy(collision.gameObject);
+        }
+    }
 }
