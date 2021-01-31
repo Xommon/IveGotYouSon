@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRenderer : MonoBehaviour
+public class FurnitureRenderer : MonoBehaviour
 {
     public GameObject room;
     WallRenderer wallRenderer;
-    public MeshRenderer meshRenderer;
+    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -16,6 +16,6 @@ public class EnemyRenderer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (wallRenderer!=null) meshRenderer.enabled = wallRenderer.playerPresent;
+        spriteRenderer.enabled = wallRenderer.playerPresent;
     }
 }

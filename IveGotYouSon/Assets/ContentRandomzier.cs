@@ -12,24 +12,17 @@ public class ContentRandomzier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        numberOfSpawnsUsable = Random.Range(4, 6);
-
-        for (int i = 0; i < numberOfSpawnsUsable; i++)
+        try
         {
-            int enemyIndex = Random.Range(0, enemies.Count);
-            int obstacleIndex = Random.Range(0, obstacles.Count);
-            int spawnIndex = Random.Range(0, spawnPoints.Count);
+            numberOfSpawnsUsable = Random.Range(4, 6);
 
-            if (i == 0)
+            for (int i = 0; i < numberOfSpawnsUsable; i++)
             {
-                GameObject createObstacleOrEnemy = Instantiate(enemies[enemyIndex], transform.position + spawnPoints[spawnIndex].transform.position, Quaternion.identity);
-                createObstacleOrEnemy.GetComponent<EnemyRenderer>().room = gameObject;
-                enemies.RemoveAt(enemyIndex);
-                spawnPoints.RemoveAt(spawnIndex);
-            }
-            else
-            {
-                if (Random.Range(0, 3) == 0)
+                int enemyIndex = Random.Range(0, enemies.Count);
+                int obstacleIndex = Random.Range(0, obstacles.Count);
+                int spawnIndex = Random.Range(0, spawnPoints.Count);
+
+                if (i == 0)
                 {
                     GameObject createObstacleOrEnemy = Instantiate(enemies[enemyIndex], transform.position + spawnPoints[spawnIndex].transform.position, Quaternion.identity);
                     createObstacleOrEnemy.GetComponent<EnemyRenderer>().room = gameObject;
@@ -38,12 +31,25 @@ public class ContentRandomzier : MonoBehaviour
                 }
                 else
                 {
-                    GameObject createObstacleOrEnemy = Instantiate(obstacles[obstacleIndex], transform.position + spawnPoints[spawnIndex].transform.position, Quaternion.identity);
-                    //createObstacleOrEnemy.GetComponent<EnemyRenderer>().room = gameObject;
-                    obstacles.RemoveAt(obstacleIndex);
-                    spawnPoints.RemoveAt(spawnIndex);
+                    if (Random.Range(0, 3) == 0)
+                    {
+                        GameObject createObstacleOrEnemy = Instantiate(enemies[enemyIndex], transform.position + spawnPoints[spawnIndex].transform.position, Quaternion.identity);
+                        createObstacleOrEnemy.GetComponent<EnemyRenderer>().room = gameObject;
+                        enemies.RemoveAt(enemyIndex);
+                        spawnPoints.RemoveAt(spawnIndex);
+                    }
+                    else
+                    {
+                        GameObject createObstacleOrEnemy = Instantiate(obstacles[obstacleIndex], transform.position + spawnPoints[spawnIndex].transform.position, Quaternion.identity);
+                        createObstacleOrEnemy.GetComponent<FurnitureRenderer>().room = gameObject;
+                        obstacles.RemoveAt(obstacleIndex);
+                        spawnPoints.RemoveAt(spawnIndex);
+                    }
                 }
             }
+        }
+        catch (System.ArgumentOutOfRangeException e){
+            print(e + ": this is fine probably");
         }
     }
 

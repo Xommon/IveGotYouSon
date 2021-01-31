@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer[] aimDots;
     public SpriteRenderer closestDot;
     public bool hurt;
-    //public GameObject debugObject;
+    public GameObject debugObject;
     public Vector3 debugValues;
 
     static Vector2 xTranslation = new Vector2(1, 1);
@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;*/
 
         //Debug.Log($"{transform.position} - {GetMouseWorldPosition()} = {transform.position - GetMouseWorldPosition()}");
-        //debugObject.transform.position = GetMouseWorldPosition();
+        debugObject.transform.position = GetMouseWorldPosition();
 
 
         for (int i = 0; i < bears.Length; i++)
