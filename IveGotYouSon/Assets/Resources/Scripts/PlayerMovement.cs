@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -57,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (health - 1 < i)
             {
-                //hearts[i].GetComponent<Image>().sprite = heartSprites[1];
+                hearts[i].GetComponent<Image>().sprite = heartSprites[1];
             }
             else
             {
-                //hearts[i].GetComponent<Image>().sprite = heartSprites[0];
+                hearts[i].GetComponent<Image>().sprite = heartSprites[0];
             }
         }
 
@@ -74,11 +73,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (bearCount - 1 < i)
             {
-                //bears[i].GetComponent<Image>().sprite = bearSprites[1];
+                bears[i].GetComponent<Image>().sprite = bearSprites[1];
             }
             else
             {
-                //bears[i].GetComponent<Image>().sprite = bearSprites[0];
+                bears[i].GetComponent<Image>().sprite = bearSprites[0];
             }
         }
 
