@@ -104,7 +104,7 @@ public class EnemyFollow : MonoBehaviour
             Destroy(collision.gameObject);
         }
         if (collision.transform.tag == "Player" && player.damageTimer <= 0) {
-            player.takeDamage(1f);
+            player.takeDamage(1);
         }
     }
 }
