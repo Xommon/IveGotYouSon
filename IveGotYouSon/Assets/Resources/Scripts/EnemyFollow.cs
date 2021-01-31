@@ -22,7 +22,7 @@ public class EnemyFollow : MonoBehaviour
         enemyRenderer = GetComponent<EnemyRenderer>();
         startingPosition = transform.position;
 
-        bookSpine = GameObject.Find("Spine GameObjectBatBook");
+        bookSpine = GameObject.Find("SpineGameObjectBatBook");
     }
 
     // Update is called once per frame
