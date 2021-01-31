@@ -282,6 +282,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3367044360311049435, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7671635152995188159, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8465915889595991696, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Name
       value: Player
@@ -369,6 +377,18 @@ PrefabInstance:
     - target: {fileID: 8465915890114771669, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648185813863375169, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654819760245311677, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654819760245311677, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ad5b940940843429d1992a6e12bac4, type: 3}
@@ -1381,7 +1401,7 @@ MonoBehaviour:
   closedRoom: {fileID: 4966263891859250657, guid: 1b9b8d4ee1d836c4d849181747ac9c44, type: 3}
   rooms: []
   waitTime: 2
-  boss: {fileID: 1898445321837384, guid: 09e14c596e782a742829f1166838514d, type: 3}
+  son: {fileID: 2017339877645203818, guid: e2d8ca481cafc7348961bbd731695876, type: 3}
   teddyBear: {fileID: 8440401492680456270, guid: 678e2f3f00774084585f59eb2d1dd51e, type: 3}
 --- !u!1 &1590159822
 GameObject:
